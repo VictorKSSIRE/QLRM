@@ -35,6 +35,8 @@ def run(train_path, lamb):
     solution_vec = Statevector(naive_hhl_solution.state).data[4096:4100].real
     norm = naive_hhl_solution.euclidean_norm
     norm_sol = 2 * solution_vec / np.sum(solution_vec)
+
+    # Print and analyze outcomes
     print("solution_vec", solution_vec)
     print("norm", norm)
     print("norm_sol", norm_sol)
